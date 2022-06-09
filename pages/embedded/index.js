@@ -24,7 +24,8 @@ export default function Index() {
   useEffect(async () => {
     const response = await authenticatedFetch(app)('/api/products');
     const {body} = await response.json();
-    setProducts(body.products);
+    //The shape of the /api/products response has changed.
+    //setProducts(body.products);
   }, [])
 
   return (
